@@ -1,0 +1,8 @@
+version: '3.2'
+services:
+    duckworth:
+        image: mlove/errbot:xmpp
+        volumes:
+            - ./config-template.py:/opt/errbot/config.py
+        ports:
+            - 5222:5222
