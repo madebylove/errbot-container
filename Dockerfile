@@ -10,8 +10,7 @@ RUN apt-get update && \
     apt-get install -y libssl-dev libffi-dev && \
     apt-get clean
 
-RUN pip3 install errbot
-
+RUN pip3 install errbot sleekxmpp
 RUN mkdir $ERR_HOME
 
 WORKDIR $ERR_HOME
@@ -19,4 +18,3 @@ WORKDIR $ERR_HOME
 RUN errbot --init
 
 CMD errbot
-
